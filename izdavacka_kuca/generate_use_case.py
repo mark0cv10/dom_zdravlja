@@ -324,30 +324,25 @@ def generate():
         c_top, c_bot = actor_bbox(cy_c)
         p_top, p_bot = actor_bbox(cy_p)
 
-        # Dijete — gore centar, roditelj — dolje centar (ili odgovarajuća strana)
-        if cy_c > cy_p:
-            # Dijete ispod roditelja
-            y_start = cy_c - 10  # vrh glave djeteta
-            y_end = p_bot + 20  # dno roditelja + label
-        elif cy_c < cy_p:
-            y_start = c_bot + 20
-            y_end = cy_p - 10
-        else:
-            y_start = cy_c
-            y_end = cy_p
+        # Tačke spajanja
+        child_head_top = cy_c - 10
+        parent_feet_bot = p_bot + 20  # ispod labele roditelja
 
-        # Za Urednik i Administrator koji su desno, crta ide lijevo do Korisnik
-        if cx_c != cx_p:
-            # Koristi lomljenu liniju: child gore -> horizontalno -> parent dole
-            mid_x = (cx_c + cx_p) // 2
-            # Vertikalni segment od djeteta
-            draw_line(draw, cx_c, y_start, cx_c, y_start - 30, color=INHERIT_COLOR, width=2)
-            # Horizontalni segment
-            draw_line(draw, cx_c, y_start - 30, cx_p, y_start - 30, color=INHERIT_COLOR, width=2)
-            # Vertikalni segment do roditelja sa strelicom
-            draw_inheritance_arrow(draw, cx_p, y_start - 30, cx_p, y_end, color=INHERIT_COLOR, width=2)
+        if cx_c == cx_p:
+            # Isti stub — vertikalna linija sa strelicom
+            draw_inheritance_arrow(draw, cx_c, child_head_top, cx_p, parent_feet_bot,
+                                   color=INHERIT_COLOR, width=2)
         else:
-            draw_inheritance_arrow(draw, cx_c, y_start, cx_p, y_end, color=INHERIT_COLOR, width=2)
+            # Razliciti stubovi (Urednik, Administrator desno -> Korisnik lijevo)
+            # Lomljena linija: gore od djeteta, horizontalno, pa dolje do roditelja
+            bend_y = min(child_head_top, cy_p - 10) - 40  # iznad oba
+            # Od djeteta gore do bend_y
+            draw_line(draw, cx_c, child_head_top, cx_c, bend_y, color=INHERIT_COLOR, width=2)
+            # Horizontalno do roditelja
+            draw_line(draw, cx_c, bend_y, cx_p, bend_y, color=INHERIT_COLOR, width=2)
+            # Od bend_y dolje do roditelja sa strelicom
+            draw_inheritance_arrow(draw, cx_p, bend_y, cx_p, parent_feet_bot,
+                                   color=INHERIT_COLOR, width=2)
 
     # ── Extend relacije ──────────────────────────────────────
     extends = [

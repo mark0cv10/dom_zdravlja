@@ -1,0 +1,29 @@
+% Podrška za UTF-8 srpski znakove
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+
+% Dodatna podrška za tabele
+\usepackage{makecell}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+
+% Smanji font u tabelama + omogući RaggedRight za bolji prelom
+\usepackage{etoolbox}
+\AtBeginEnvironment{longtable}{\small\RaggedRight}
+
+% Omogući prelom dugih riječi u tabelama i tekstu
+\sloppy
+\setlength{\emergencystretch}{3em}
+
+% Prelom unutar tabela - dozvoli da longtable prelazi na sljedeću stranicu
+\setlength{\LTpre}{6pt}
+\setlength{\LTpost}{6pt}
+
+% Naslovi - smanji veličinu da stanu na stranicu
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}

@@ -15,14 +15,24 @@ jobs:
       - name: Prikazi fajlove
         run: ls -la
 
-      - name: Instaliraj Pandoc
+      - name: Instaliraj Pandoc i LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-xetex
+          sudo apt-get install -y pandoc texlive-xetex texlive-latex-extra texlive-fonts-extra fonts-dejavu
 
       - name: Konvertuj u PDF
         run: |
-          pandoc -f markdown-yaml_metadata_block "specifikacija.md" -o "specifikacija.pdf" --pdf-engine=xelatex -V geometry:margin=1in
+          pandoc -f markdown-yaml_metadata_block \
+            "specifikacija.md" \
+            -o "specifikacija.pdf" \
+            --pdf-engine=xelatex \
+            -H header.tex \
+            --wrap=auto \
+            -V documentclass=article \
+            -V papersize=a4 \
+            -V fontsize=11pt \
+            -V geometry:margin=2cm \
+            -V lang=bs
 
       - name: Uploaduj PDF
         uses: actions/upload-artifact@v4

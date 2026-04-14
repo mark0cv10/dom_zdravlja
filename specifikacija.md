@@ -1083,6 +1083,7 @@ Sistem *Dom zdravlja* donosi brojne prednosti u odnosu na tradicionalni (papirni
 - **Skalabilnost:** Sistem se može lako prilagoditi za korištenje u većim zdravstvenim ustanovama sa više odjeljenja i ljekara.
 
 ---
+
 ## 4. Dodaci
 
 ### 4.1. Dodatak A — Dijagram konteksta web aplikacije
@@ -1113,7 +1114,9 @@ Dijagram konteksta prikazuje sistem *Dom zdravlja* kao cjelinu i njegove interak
 *Slika 4.1.1. Dijagram konteksta web aplikacije Dom zdravlja*
 
 ---
+
 ### 4.2. Dodatak B — Model baze podataka
+
 Model baze podataka prikazuje fizičku strukturu relacione baze podataka sistema *Dom zdravlja*. Dijagram entiteta i veza (ER dijagram) prikazuje sve tabele, njihove kolone (atribute), tipove podataka, primarne i strane ključeve, te relacije između tabela.
 
 **Tabele baze podataka:**
@@ -1230,10 +1233,12 @@ Model baze podataka prikazuje fizičku strukturu relacione baze podataka sistema
 *Slika 4.2.1. ER dijagram (model baze podataka) sistema Dom zdravlja*
 
 ---
+
 ### 4.3. Dodatak C — Mockup web aplikacije
 U ovom poglavlju prikazane su makete (wireframe) ključnih ekrana web aplikacije *Dom zdravlja*. Makete ilustruju izgled i raspored elemenata korisničkog interfejsa za svaki zahtjev iz poglavlja 3.2. Dizajn je zasnovan na responzivnom Bootstrap 5 framework-u.
 
 ---
+
 **G1: Registracija pacijenta**
 Stranica za registraciju sadrži formu sa svim obaveznim poljima: ime, prezime, JMBG, datum rođenja, spol, adresa, telefon, e-mail, lozinka i ponovljena lozinka. Na dnu forme nalaze se dugmad "Registrujte se" i "Odustanite". Zaglavlje stranice sadrži logo doma zdravlja i navigacioni meni za goste.
 
@@ -1242,6 +1247,7 @@ Stranica za registraciju sadrži formu sa svim obaveznim poljima: ime, prezime, 
 *Slika 4.3.1. Registracija pacijenta*
 
 ---
+
 **K1: Prijava korisnika**
 Stranica za prijavu sadrži dva polja (e-mail i lozinka), dugme "Prijavite se", te link "Registrujte se" za goste koji nemaju nalog. Dizajn je centriran na stranici sa logom doma zdravlja iznad forme.
 
@@ -1250,6 +1256,7 @@ Stranica za prijavu sadrži dva polja (e-mail i lozinka), dugme "Prijavite se", 
 *Slika 4.3.2. Prijava korisnika*
 
 ---
+
 **K2: Podešavanje profila**
 Stranica za podešavanje profila sadrži formu sa editabilnim poljima (adresa, telefon, fotografija) i posebnu sekciju za promjenu lozinke (stara lozinka, nova lozinka, ponovljena nova lozinka). Na dnu su dugmad "Potvrdite" i "Odustanite". Navigacioni meni je prilagođen ulozi prijavljenog korisnika.
 
@@ -1258,6 +1265,7 @@ Stranica za podešavanje profila sadrži formu sa editabilnim poljima (adresa, t
 *Slika 4.3.3. Podešavanje profila*
 
 ---
+
 **K3: Odjava**
 Odjava se vrši klikom na link "Odjava" u padajućem meniju korisničkog imena u zaglavlju. Nakon odjave, korisnik se preusmjerava na početnu stranicu.
 
@@ -1266,6 +1274,7 @@ Odjava se vrši klikom na link "Odjava" u padajućem meniju korisničkog imena u
 *Slika 4.3.4. Odjava korisnika*
 
 ---
+
 **G2: Pregled informacija o domu zdravlja**
 Početna (javna) stranica prikazuje osnovne informacije o domu zdravlja: radno vrijeme, adresu, kontakt telefon, e-mail. U glavnom meniju nalaze se linkovi "Odjeljenja" i "Ljekari" koji vode na odgovarajuće liste. U gornjem desnom uglu nalaze se linkovi "Prijava" i "Registracija".
 
@@ -1274,6 +1283,7 @@ Početna (javna) stranica prikazuje osnovne informacije o domu zdravlja: radno v
 *Slika 4.3.5. Početna stranica (informacije o domu zdravlja)*
 
 ---
+
 **P1: Zakazivanje pregleda**
 Stranica za zakazivanje pregleda sadrži: padajuću listu za odabir odjeljenja, padajuću listu za odabir ljekara (filtriranu po odjeljenju), kalendar za odabir datuma (sa označenim slobodnim danima), listu slobodnih termina za odabrani datum, polje za unos razloga posjete (opciono), te dugmad "Zakaži pregled" i "Odustanite".
 
@@ -1282,6 +1292,7 @@ Stranica za zakazivanje pregleda sadrži: padajuću listu za odabir odjeljenja, 
 *Slika 4.3.6. Zakazivanje pregleda*
 
 ---
+
 **P1.1: Otkazivanje zakazanog pregleda**
 Stranica "Moji termini" prikazuje tabelu zakazanih pregleda sa kolonama: datum, vrijeme, ljekar, odjeljenje, status. Pored svakog termina koji je moguće otkazati (>24h do termina) nalazi se dugme "Otkažite". Klikom na "Otkažite" pojavljuje se potvrdni dijalog sa dugmadima "Da" i "Ne".
 
@@ -1290,6 +1301,7 @@ Stranica "Moji termini" prikazuje tabelu zakazanih pregleda sa kolonama: datum, 
 *Slika 4.3.7. Otkazivanje zakazanog pregleda*
 
 ---
+
 **P2: Pregled zdravstvenog kartona**
 Stranica "Moj karton" prikazuje zdravstveni karton pacijenta u tabelarnom obliku sa kolonama: datum, ljekar, dijagnoza (MKB-10 šifra i naziv), terapija, bilješke. Iznad tabele nalaze se filteri za pretragu po datumu, ljekaru i tipu zapisa.
 
@@ -1298,6 +1310,7 @@ Stranica "Moj karton" prikazuje zdravstveni karton pacijenta u tabelarnom obliku
 *Slika 4.3.8. Pregled zdravstvenog kartona*
 
 ---
+
 **P3: Pregled izdatih recepata**
 Stranica "Moji recepti" prikazuje listu recepata u tabelarnom obliku sa kolonama: datum izdavanja, naziv lijeka, doza, način primjene, ljekar, status (aktivan/istekao). Iznad tabele nalaze se filteri za pretragu po statusu i datumu. Klikom na red otvara se detaljan prikaz recepta.
 
@@ -1306,6 +1319,7 @@ Stranica "Moji recepti" prikazuje listu recepata u tabelarnom obliku sa kolonama
 *Slika 4.3.9. Pregled izdatih recepata*
 
 ---
+
 **P4: Pregled izdatih uputnica**
 Stranica "Moje uputnice" prikazuje listu uputnica u tabelarnom obliku sa kolonama: datum izdavanja, vrsta pregleda/procedure, razlog upućivanja, ljekar, ustanova, rok važenja, status (aktivna/iskorištena/istekla). Filteri za pretragu po statusu i datumu.
 
@@ -1314,6 +1328,7 @@ Stranica "Moje uputnice" prikazuje listu uputnica u tabelarnom obliku sa kolonam
 *Slika 4.3.10. Pregled izdatih uputnica*
 
 ---
+
 **P5: Ocjenjivanje ljekara**
 Forma za ocjenjivanje ljekara sadrži: prikaz informacija o pregledu (datum, ljekar), vizuelni odabir ocjene (1–5 zvjezdica — klikom na zvjezdicu), polje za unos komentara (opciono), te dugmad "Pošaljite ocjenu" i "Odustanite".
 
@@ -1322,6 +1337,7 @@ Forma za ocjenjivanje ljekara sadrži: prikaz informacija o pregledu (datum, lje
 *Slika 4.3.11. Ocjenjivanje ljekara*
 
 ---
+
 **L1: Pregled rasporeda ljekara**
 Dashboard ljekara prikazuje raspored u kalendarskom obliku sa tri prikaza: dnevni, sedmični i mjesečni (prebacivanje klikom na odgovarajuće dugme). Svaki termin u kalendaru sadrži ime pacijenta, vrijeme i kratki opis razloga posjete. Zakazani termini su označeni bojom u zavisnosti od statusa (zakazan, primljen, u toku, završen).
 
@@ -1330,6 +1346,7 @@ Dashboard ljekara prikazuje raspored u kalendarskom obliku sa tri prikaza: dnevn
 *Slika 4.3.12. Pregled rasporeda ljekara*
 
 ---
+
 **L2: Vođenje pregleda pacijenta**
 Stranica za vođenje pregleda sadrži: podatke o pacijentu (ime, prezime, JMBG, datum rođenja) u zaglavlju, zdravstveni karton sa prethodnim pregledima/dijagnozama u lijevoj koloni, formu za unos nalaza, odabir dijagnoze (MKB-10 pretraga), unos terapije i bilješki u desnoj koloni. Na dnu su dugmad "Završi pregled" i "Odustanite", te dugmad "Izdaj recept" i "Izdaj uputnicu".
 
@@ -1338,6 +1355,7 @@ Stranica za vođenje pregleda sadrži: podatke o pacijentu (ime, prezime, JMBG, 
 *Slika 4.3.13. Vođenje pregleda pacijenta*
 
 ---
+
 **L3: Izdavanje recepta**
 Forma za izdavanje recepta sadrži: padajuću listu za naziv lijeka (sa pretragom), polja za dozu, način primjene (padajuća lista), učestalost, trajanje terapije i napomene. Na dnu su dugmad "Izdaj recept" i "Odustanite".
 
@@ -1346,6 +1364,7 @@ Forma za izdavanje recepta sadrži: padajuću listu za naziv lijeka (sa pretrago
 *Slika 4.3.14. Izdavanje recepta*
 
 ---
+
 **L4: Izdavanje uputnice**
 Forma za izdavanje uputnice sadrži: padajuću listu za vrstu pregleda/procedure, polje za razlog upućivanja, odabir dijagnoze (MKB-10), padajuću listu za ustanovu, polje za rok važenja (podrazumijevano 30 dana) i napomene. Na dnu su dugmad "Izdaj uputnicu" i "Odustanite".
 
@@ -1354,6 +1373,7 @@ Forma za izdavanje uputnice sadrži: padajuću listu za vrstu pregleda/procedure
 *Slika 4.3.15. Izdavanje uputnice*
 
 ---
+
 **S1: Upravljanje rasporedom ljekara**
 Stranica za upravljanje rasporedom sadrži: padajuću listu za odabir ljekara, kalendarski prikaz postojećih termina, formu za kreiranje novih termina (datum, početak/kraj radnog vremena, trajanje termina, pauza). Na dnu su dugmad "Sačuvajte raspored" i "Odustanite". Postojeći termini sa zakazanim pacijentima su označeni posebnom bojom sa upozorenjem da ih nije moguće obrisati bez prethodnog obavještenja pacijenta.
 
@@ -1362,6 +1382,7 @@ Stranica za upravljanje rasporedom sadrži: padajuću listu za odabir ljekara, k
 *Slika 4.3.16. Upravljanje rasporedom ljekara*
 
 ---
+
 **S2: Prijem pacijenta**
 Stranica "Prijem pacijenata" prikazuje tabelu zakazanih pacijenata za trenutni dan sa kolonama: vrijeme, ime i prezime pacijenta, ljekar, status (čeka/primljen/odsutan). Pored svakog pacijenta sa statusom "čeka" nalazi se dugme "Primi pacijenta". Pored pacijenata koji se nisu pojavili nalazi se dugme "Označi kao odsutan".
 
@@ -1370,6 +1391,7 @@ Stranica "Prijem pacijenata" prikazuje tabelu zakazanih pacijenata za trenutni d
 *Slika 4.3.17. Prijem pacijenta*
 
 ---
+
 **S3: Trijaža pacijenta**
 Forma za trijažu sadrži: podatke o pacijentu u zaglavlju, polja za vitalne znakove (krvni pritisak, temperatura, puls), padajuću listu za kategoriju hitnosti (1–Hitno, 2–Urgentno, 3–Manje urgentno, 4–Neurgentno, 5–Rutinsko), padajuću listu za odabir ljekara/odjeljenja, polje za napomene. Na dnu su dugmad "Sačuvajte" i "Odustanite".
 
@@ -1378,6 +1400,7 @@ Forma za trijažu sadrži: podatke o pacijentu u zaglavlju, polja za vitalne zna
 *Slika 4.3.18. Trijaža pacijenta*
 
 ---
+
 **A1: Pregled korisnika**
 Stranica "Korisnici" prikazuje tabelu svih korisnika sa kolonama: ime, prezime, e-mail, uloga, status. Iznad tabele nalaze se polje za pretragu i filteri po ulozi. Iznad tabele je dugme "Dodaj korisnika". Pored svakog korisnika nalaze se dugmad "Izmijenite", "Promijeni ulogu" i "Obrišite".
 
@@ -1386,6 +1409,7 @@ Stranica "Korisnici" prikazuje tabelu svih korisnika sa kolonama: ime, prezime, 
 *Slika 4.3.19. Pregled korisnika*
 
 ---
+
 **A1.1: Unos novog korisnika**
 Forma za unos novog korisnika sadrži polja: ime, prezime, e-mail, uloga (padajuća lista), odjeljenje (padajuća lista — za ljekare i sestre), specijalizacija (padajuća lista — za ljekare), lozinka, ponovljena lozinka, fotografija (upload). Na dnu su dugmad "Sačuvajte" i "Odustanite".
 
@@ -1394,6 +1418,7 @@ Forma za unos novog korisnika sadrži polja: ime, prezime, e-mail, uloga (padaju
 *Slika 4.3.20. Unos novog korisnika*
 
 ---
+
 **A2: Konfiguracija sistema**
 Stranica "Konfiguracija" sadrži kartice (tabove) za različite sekcije: "Radno vrijeme" (tabela sa danima u sedmici i početkom/krajem radnog vremena), "Odjeljenja" (CRUD tabela), "Ordinacije" (CRUD tabela sa pripadajućim odjeljenjem), "Specijalnosti" (CRUD tabela), "Trajanje termina" (padajuća lista: 15/20/30 minuta). Na dnu svake sekcije su dugmad "Sačuvajte" i "Odustanite".
 
@@ -1402,6 +1427,7 @@ Stranica "Konfiguracija" sadrži kartice (tabove) za različite sekcije: "Radno 
 *Slika 4.3.21. Konfiguracija sistema*
 
 ---
+
 **A3: Pregled sistemskih logova i statistike**
 Stranica "Izvještaji" sadrži kartice za različite vrste izvještaja: "Sistemski logovi" (tabela sa kolonama: datum/vrijeme, korisnik, akcija, IP adresa), "Statistika pregleda" (grafički prikaz broja pregleda po danima/sedmicama/mjesecima), "Statistika korisnika" (aktivni, novi registrovani), "Statistika recepata i uputnica". Iznad svake sekcije nalaze se filteri za datumski raspon. Dugme "Eksportuj" omogućava eksport izvještaja u PDF ili CSV format.
 
