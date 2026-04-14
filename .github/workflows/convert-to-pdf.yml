@@ -22,7 +22,7 @@ jobs:
 
       - name: Konvertuj u PDF
         run: |
-          pandoc "specifikacija.md" -o "specifikacija.pdf" --pdf-engine=xelatex -V geometry:margin=1in
+          pandoc -f markdown-yaml_metadata_block "specifikacija.md" -o "specifikacija.pdf" --pdf-engine=xelatex -V geometry:margin=1in
 
       - name: Uploaduj PDF
         uses: actions/upload-artifact@v4
