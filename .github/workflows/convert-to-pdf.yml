@@ -12,6 +12,9 @@ jobs:
       - name: Preuzmi kod
         uses: actions/checkout@v4
 
+      - name: Prikazi fajlove
+        run: ls -la
+
       - name: Instaliraj Pandoc
         run: |
           sudo apt-get update
@@ -19,7 +22,7 @@ jobs:
 
       - name: Konvertuj u PDF
         run: |
-          pandoc specifikacija.md -o specifikacija.pdf --pdf-engine=xelatex -V geometry:margin=1in
+          pandoc "specifikacija.md" -o "specifikacija.pdf" --pdf-engine=xelatex -V geometry:margin=1in
 
       - name: Uploaduj PDF
         uses: actions/upload-artifact@v4
